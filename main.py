@@ -44,11 +44,12 @@ playlist = sp.user_playlist_create(
 playlsit_id = playlist["id"]
 
 format = "%Y-%m-%d"
-input("We are Collecting music from the billboard site for the most played 100songs.")
-user_date = input("Please enter your preffered Date in the format YYYY-MM_DD: ")
+
 
 start = True
 while start:
+    input("We are Collecting music from the billboard site for the most played 100songs.")
+    user_date = input("Please enter your preffered Date in the format YYYY-MM_DD: ")
     try:
         bool(datetime.strptime(user_date, format))
     except ValueError:
